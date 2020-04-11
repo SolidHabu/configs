@@ -52,7 +52,7 @@ WPS="/mnt/e/Computer/Utilities_System/Sysinternals/pslist.exe"
 $WPS -t $*
 }
 
-function netstat {
+function wnetstat {
 #Use netstat to see net connections
 netstat.exe -ano
 }
