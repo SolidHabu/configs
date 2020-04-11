@@ -1,0 +1,60 @@
+#GENERAL SYSTEM
+alias lt='ls -lAtr'
+alias ll='ls -lisa'
+alias ld='ls -latr -d *'
+alias rm='rm -i' 
+alias cp='cp -i'
+#triage ps
+alias tps='ps -e -o uid,pid,ppid,pgid,stime,tty,cmd,args'
+#pgid ps,groupkill
+alias gps='ps -e -o uid,pid,ppid,pgid,stime,tty,cmd'
+alias gkill='kill -9 -'
+
+#VIM & SOURCES
+alias vba='vim ~/.bash_aliases'
+alias vbr='vim ~/.bashrc'
+alias vdc='vim ~/.dircolors'
+alias vvr='vim ~/.vimrc'
+alias sbr='source ~/.bashrc'
+alias vqn='vim ~/quicknotes.txt'
+
+#OTHER COMMANDS
+alias py3='python3'
+alias ex='explorer.exe'
+alias sshm='ssh -i ~/.ssh/id_mush_rsa -p 2222 root@192.168.1.172'
+alias sshl='ssh -i ~/.ssh/logserv_rsa -p 2200 root@192.168.1.172'
+
+
+#FUNCTIONS
+function pubip {
+curl ifconfig.io
+}
+
+function pfind {
+#Finds and prints full path to file w/o having to call find
+A="${1,,}"
+if [ -z "$A" ] || [ "$A" == "-h" ]  || [  "$A" == "--help" ] || [ "$A" == '/?' ]
+then 
+	echo "USAGE: find [-h|here|file|folder]"
+fi
+
+if [ "$A" == "here" ]
+then
+	find $PWD -maxdepth 1 2>/dev/null
+else
+	find $PWD -iname $1 2>/dev/null
+fi
+}
+
+function wps {
+#Use sysinternals ps to get an actual windows process list. 
+WPS="/mnt/e/Computer/Utilities_System/Sysinternals/pslist.exe"
+$WPS -t $*
+}
+
+function netstat {
+#Use netstat to see net connections
+netstat.exe -ano
+}
+
+
