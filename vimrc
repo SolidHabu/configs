@@ -14,6 +14,7 @@ vnoremap <leader>s y:%s/<C-r>"//g<Left><Left>
 "Timestamps in N/I cuz vims awesome
 nnoremap <F5>  "=strftime('%H:%M:%S %m/%d/%Y %Z')<CR>Pa -- 
 inoremap <F5>  <C-R>=strftime('%H:%M:%S %m/%d/%Y %Z')<SPACE><CR> --  
+inoremap <leader>p <C-r>"
 
 nmap <F4> :set hls! <CR>    
 nmap <F3> :set nu! <CR>
