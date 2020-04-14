@@ -1,3 +1,4 @@
+###NIX 
 #GENERAL SYSTEM
 alias lt='ls -lAtr'
 alias ll='ls -lisa'
@@ -17,10 +18,10 @@ alias vdc='vim ~/.dircolors'
 alias vvr='vim ~/.vimrc'
 alias sbr='source ~/.bashrc'
 alias vqn='vim ~/quicknotes.txt'
+alias mulv='vim -p'
 
 #OTHER COMMANDS
 alias py3='python3'
-alias ex='explorer.exe'
 alias sshm='ssh -i ~/.ssh/id_mush_rsa -p 2222 root@192.168.1.172'
 alias sshl='ssh -i ~/.ssh/logserv_rsa -p 2200 root@192.168.1.172'
 
@@ -46,6 +47,12 @@ else
 fi
 }
 
+###WSL SPECIFIC.
+#If you aren't using WSL, comment out.
+#ALIASES
+alias ex='explorer.exe'
+
+#FUNCTIONS
 function wps {
 #Use sysinternals ps to get an actual windows process list. 
 WPS="/mnt/e/Computer/Utilities_System/Sysinternals/pslist.exe"
