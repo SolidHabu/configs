@@ -11,13 +11,14 @@ nnoremap <leader>rvr :so $MYVIMRC<CR>
 nnoremap <leader>evr :tabf $MYVIMRC<CR>		
 "Sub using selected text 
 vnoremap <leader>s y:%s/<C-r>"//g<Left><Left>
+"set number lines and search highlight on and off
+nmap <F3> :set nu! <CR>
+nmap <F4> :set hls! <CR>    
 "Timestamps in N/I cuz vims awesome
 nnoremap <F5>  "=strftime('%H:%M:%S %m/%d/%Y %Z')<CR>Pa -- 
 inoremap <F5>  <C-R>=strftime('%H:%M:%S %m/%d/%Y %Z')<SPACE><CR> --  
 inoremap <leader>p <C-r>"
 
-nmap <F4> :set hls! <CR>    
-nmap <F3> :set nu! <CR>
 
 
 """ ++++ Sets! ++++ 
