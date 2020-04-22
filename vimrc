@@ -12,18 +12,19 @@ nmap <F4> :set hls! <CR>
 
 
 "Reload and edit vimrc
-nnoremap <leader>rvr :source $MYVIMRC<CR>                               " Reload vimrc
-nnoremap <leader>evr :tabfind $MYVIMRC<CR>                              " Edit vimrc
+nnoremap <leader>rvr :source $MYVIMRC<CR>                               
+nnoremap <leader>evr :tabfind $MYVIMRC<CR>                              
 
-"Substitution 
-vnoremap <leader>s y:%s/<C-r>"//g<Left><Left>                           " Substitute using selected text
+"Substitute using selected text
+vnoremap <leader>s y:%s/<C-r>"//g<Left><Left>                           
 
 "Timestamps in N/I cuz vims awesome. Either normal/insert mode.
 nnoremap <F5>  "=strftime('%H:%M:%S %m/%d/%Y %Z')<CR>Pa -- 
 inoremap <F5>  <C-R>=strftime('%H:%M:%S %m/%d/%Y %Z')<SPACE><CR> --  
-inoremap <leader>p <C-r>"                                               " Paste the buffer in while in insert. 
-
-vnoremap <leader>e "ay:norm @a<CR>                                      " Execute hihglighted line as cmd
+"Paste the buffer in while in insert. 
+inoremap <leader>p <C-r>"                                               
+"Execute hihglighted line as cmd
+vnoremap <leader>e "ay:norm @a<CR>                                      
 
 "Split navigation with Ctrl+hjkl
 noremap <C-h>  <C-w>h
@@ -32,12 +33,12 @@ noremap <C-k>  <C-w>k
 noremap <C-l>  <C-w>l
 
 "Split change orientation
-nnoremap <leader>mv <C-w>t<C-w>H                                        " Move vertical
-nnoremap <leader>mh <C-w>t<C-w>K                                        " Move horizontal
+nnoremap <leader>mv <C-w>t<C-w>H                                        
+nnoremap <leader>mh <C-w>t<C-w>K                                        
 
 "Split maximize&&equal 
-noremap <C-w>M   <C-w>\| <C-w>_                                         " C-W+M to max split    
-noremap <C-w>m   <C-w>=                                                 " C-W+m to bring it back
+noremap <C-w>M   <C-w>\| <C-w>_                                         
+noremap <C-w>m   <C-w>=                                                 
 
 
 """ ++++ Sets! ++++ 
@@ -53,4 +54,6 @@ set showmatch                                                           " Bracke
 set incsearch                                                           " search as chars entered
 
 set fillchars+=vert:\                                                   " Remove pipes as seperators on splits
+
+
 
