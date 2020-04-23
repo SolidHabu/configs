@@ -6,14 +6,16 @@ Most of these are .files so theyre pretty easy to handle just follow the steps b
 
 ```
 mv desktop_bash_aliases .bash_aliases
-#Checking to make sure it sources it if it exists
 egrep ".bash_aliases" ~/.bashrc 
+    #Checking to make sure it sources it if it exists
 
 mv tmux.conf .tmux.conf 
 ...
 ...
 ...
-You get the idea.
+
+mv conf.vim.tar.gz ~
+tar -tvf conf.vim.tar.gz 
 ```
 
 # FILES 

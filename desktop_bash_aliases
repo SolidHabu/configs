@@ -17,8 +17,11 @@ alias vbr='vim ~/.bashrc'
 alias vdc='vim ~/.dircolors'
 alias vvr='vim ~/.vimrc'
 alias sbr='source ~/.bashrc'
-alias vqn='vim ~/quicknotes.txt'
 alias mulv='vim -p'
+alias vqn='vim ~/quicknotes.txt'
+    #Quick notes for reference, IT stuff. 
+alias vsp='vim ~/scratchpad.txt'
+    #My scratchpad 
 
 #TMUX 
 alias tmls='tmux ls'
@@ -38,7 +41,7 @@ curl ifconfig.io
 }
 
 function pfind {
-#Finds and prints full path to file w/o having to call find. MOST OF THE TIME. 
+#Finds and prints full path to file w/o having to call find
 A="${1,,}"
 if [ -z "$A" ] || [ "$A" == "-h" ]  || [  "$A" == "--help" ] || [ "$A" == '/?' ]
 then 
