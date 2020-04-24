@@ -1,12 +1,25 @@
-""" ++++ Global/Other++++
-set termguicolors
-colorscheme iceberg
+""" ++++ Global && Sets ++++
+set termguicolors                " Use trucolor. Comment out if term doesn't support.
+colorscheme iceberg              " My preferred default colorscheme. ~/.vim/colors/iceberg.vim
+
+set splitright                   " Split vertical splits to the right.  
+set expandtab                    " Insert spaces when you <TAB>
+set tabstop=4                    " # of spaces  for <TAB>
+set softtabstop=4                " # of spaces correctly removed  <TAB> & <BS> 
+set shiftwidth=4                 " # of spaces for indents
+
+set wildmenu                     " Cool menu for tabcomplete of files
+set showmatch                    " Bracket matching [{()}] 
+
+set incsearch                    " search as chars entered
+
+set fillchars+=vert:\            " Remove pipes as seperators on splits
 
 """ ++++ Mappings! ++++ 
 "map-command {binding} {command} 
 let mapleader=","
 
-"set number lines and search highlight on and off
+"set number lines and search highlight on and off at will.
 nmap <F3> :set nu! <CR>
 nmap <F4> :set hls! <CR>    
 
@@ -42,18 +55,6 @@ noremap <C-w>m   <C-w>=
 
 
 """ ++++ Sets! ++++ 
-set splitright                                                          " Split vertical splits to the right.  
-set expandtab                                                           " Insert spaces when you <TAB>
-set tabstop=4                                                           " # of spaces  for <TAB>
-set softtabstop=4                                                       " # of spaces correctly removed  <TAB> & <BS> 
-set shiftwidth=4                                                        " # of spaces for indents
-
-set wildmenu                                                            " Cool menu for tabcomplete of files
-set showmatch                                                           " Bracket matching [{()}] 
-
-set incsearch                                                           " search as chars entered
-
-set fillchars+=vert:\                                                   " Remove pipes as seperators on splits
 
 
 
