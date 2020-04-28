@@ -18,10 +18,8 @@ alias vdc='vim ~/.dircolors'
 alias vvr='vim ~/.vimrc'
 alias sbr='source ~/.bashrc'
 alias mulv='vim -p'
-alias vqn='vim ~/quicknotes.txt'
-    #Quick notes for reference, IT stuff. 
-alias vsp='vim ~/scratchpad.txt'
-    #My scratchpad 
+alias vqn='vim ~/notes/quicknotes.txt'
+alias vsp='vim ~/notes/scratchpad.txt'
 
 #TMUX 
 alias tmls='tmux ls'
