@@ -21,23 +21,25 @@ let mapleader=","
 
 "set number lines and search highlight on and off at will.
 nmap <F3> :set nu! <CR>
-nmap <F4> :set hls! <CR>    
+nmap <F4> :set hls! <CR> 
 
 
 "Reload and edit vimrc
-nnoremap <leader>rvr :source $MYVIMRC<CR>                               
-nnoremap <leader>evr :tabfind $MYVIMRC<CR>                              
+nnoremap <leader>rvr :source $MYVIMRC<CR>
+nnoremap <leader>evr :tabfind $MYVIMRC<CR>              
 
 "Substitute using selected text
-vnoremap <leader>s y:%s/<C-r>"//g<Left><Left>                           
+vnoremap <leader>s y:%s/<C-r>"//g<Left><Left>
 
 "Timestamps in N/I cuz vims awesome. Either normal/insert mode.
-nnoremap <F5>  "=strftime('%H:%M:%S %m/%d/%Y %Z')<CR>Pa -- 
+nnoremap <F5>  "=strftime('%H:%M:%S %m/%d/%Y %Z')<CR>Pa --  
 inoremap <F5>  <C-R>=strftime('%H:%M:%S %m/%d/%Y %Z')<SPACE><CR> --  
+
 "Paste the buffer in while in insert. 
-inoremap <leader>p <C-r>"                                               
+inoremap <leader>p <C-r>"
+
 "Execute hihglighted line as cmd
-vnoremap <leader>e "ay:norm @a<CR>                                      
+vnoremap <leader>e "ay:norm @a<CR> 
 
 "Split navigation with Ctrl+hjkl
 noremap <C-h>  <C-w>h
@@ -46,15 +48,13 @@ noremap <C-k>  <C-w>k
 noremap <C-l>  <C-w>l
 
 "Split change orientation
-nnoremap <leader>mv <C-w>t<C-w>H                                        
-nnoremap <leader>mh <C-w>t<C-w>K                                        
+nnoremap <leader>mv <C-w>t<C-w>H 
+nnoremap <leader>mh <C-w>t<C-w>K 
 
 "Split maximize&&equal 
-noremap <C-w>M   <C-w>\| <C-w>_                                         
-noremap <C-w>m   <C-w>=                                                 
+noremap <C-w>M   <C-w>\| <C-w>_ 
+noremap <C-w>m   <C-w>=                                         
 
-
-""" ++++ Sets! ++++ 
 
 
 
