@@ -1,6 +1,9 @@
 """ ++++ Global && Sets ++++
-set termguicolors                " Use trucolor. Comment out if term doesn't support.
+filetype plugin on
+"set termguicolors                " Use trucolor. Comment out if term doesn't support.
 colorscheme iceberg              " My preferred default colorscheme. ~/.vim/colors/iceberg.vim
+
+autocmd FileType notes colorscheme substrata 
 
 set splitright                   " Split vertical splits to the right.  
 set expandtab                    " Insert spaces when you <TAB>
@@ -20,12 +23,13 @@ set fillchars+=vert:\            " Remove pipes as seperators on splits
 let mapleader=","
 
 "set number lines and search highlight on and off at will.
+"Also set f1 to handle folds. 
 nmap <F3> :set nu! <CR>
 nmap <F4> :set hls! <CR> 
-
+nmap <F1> za
 
 "Reload and edit vimrc
-nnoremap <leader>rvr :source $MYVIMRC<CR>
+nnoremap <leader>rvr :source $MYVIMRC<CR> :echo "Reloaded vimrc!"<CR>
 nnoremap <leader>evr :tabfind $MYVIMRC<CR>              
 
 "Substitute using selected text
@@ -55,6 +59,8 @@ nnoremap <leader>mh <C-w>t<C-w>K
 noremap <C-w>M   <C-w>\| <C-w>_ 
 noremap <C-w>m   <C-w>=                                         
 
-
-
+"Vim-notes settings
+let g:notes_directories = ['~/notes/vim-notes', '~/.vim/pack/SolidHabu/start/vim-notes/misc/notes'] 
+let g:notes_suffix = '.note'
+let g:notes_title_sync = 'change_title'
 
