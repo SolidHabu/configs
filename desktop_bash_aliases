@@ -10,16 +10,19 @@ alias tps='ps -e -o uid,pid,ppid,pgid,stime,tty,cmd,args'
 #pgid ps,groupkill
 alias gps='ps -e -o uid,pid,ppid,pgid,stime,tty,cmd'
 alias gkill='kill -9 -'
+alias estat='wnetstat | egrep "EST" | egrep -v "\*:\*|127.0.0.1|0.0.0.0|\[::\]:0|Address" | sort | uniq -u'
+alias lstat='wnetstat | egrep "LIST" | egrep -v "\*:\*|127.0.0.1|\[::\]:0|Address" | sort | uniq -u'
 
 #VIM & SOURCES
 alias vba='vim ~/.bash_aliases'
 alias vbr='vim ~/.bashrc'
 alias vdc='vim ~/.dircolors'
 alias vvr='vim ~/.vimrc'
-alias sbr='source ~/.bashrc'
+alias vqr='vim ~/Toolbox/reference/quick_reference.txt'
+alias vqn='vim ~/notes/vim-notes/quicknotes.note'
 alias mulv='vim -p'
-alias vqn='vim ~/notes/quicknotes.txt'
-alias vsp='vim ~/notes/scratchpad.txt'
+
+alias sbr='source ~/.bashrc'
 
 #TMUX 
 alias tmls='tmux ls'
@@ -30,7 +33,9 @@ alias tmks='tmux kill-session'
 #OTHER COMMANDS
 alias py3='python3'
 alias sshm='ssh -i ~/.ssh/id_mush_rsa -p 2222 root@192.168.1.172'
-alias sshl='ssh -i ~/.ssh/logserv_rsa -p 2200 root@192.168.1.172'
+alias sshl='ssh -i ~/.ssh/id_logserv_rsa -p 2200 root@192.168.1.172'
+alias sshd='ssh -i ~/.ssh/id_dev_rsa zeus@127.0.0.1'
+alias sshp='ssh -p 22002 -i ~/.ssh/prox_id_rsa root@192.168.1.2'
 
 
 #FUNCTIONS
@@ -43,7 +48,7 @@ function pfind {
 A="${1,,}"
 if [ -z "$A" ] || [ "$A" == "-h" ]  || [  "$A" == "--help" ] || [ "$A" == '/?' ]
 then 
-	echo "USAGE: find [-h|here|file|folder]"
+	echo "USAGE: pfind [-h|here|file|folder]"
 fi
 
 if [ "$A" == "here" ]
@@ -70,5 +75,4 @@ function wnetstat {
 #Use netstat to see net connections
 netstat.exe -ano
 }
-
 

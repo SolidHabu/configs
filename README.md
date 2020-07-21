@@ -9,13 +9,12 @@ mv desktop_bash_aliases .bash_aliases
 egrep ".bash_aliases" ~/.bashrc 
     #Checking to make sure it sources it if it exists
 
-mv tmux.conf .tmux.conf 
-...
-...
+mv x.x.tmux.conf .tmux.conf 
+
 ...
 
-mv conf.vim.tar.gz ~
-tar -tvf conf.vim.tar.gz 
+mv vimdir.tar.gz ~
+tar -tvf vimdir.tar.gz
 ```
 
 # FILES 
