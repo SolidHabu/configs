@@ -1,10 +1,17 @@
 """ ++++ Global && Sets ++++
 filetype plugin on
+
+
+"Colors 
 "set termguicolors                " Use trucolor. Comment out if term doesn't support.
+
 colorscheme iceberg              " My preferred default colorscheme. ~/.vim/colors/iceberg.vim
 
 autocmd FileType notes colorscheme substrata 
 
+"Settings 
+
+set t_BE=                        " No paste on insert 
 set splitright                   " Split vertical splits to the right.  
 set expandtab                    " Insert spaces when you <TAB>
 set tabstop=4                    " # of spaces  for <TAB>
