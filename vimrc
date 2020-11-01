@@ -66,6 +66,8 @@ nnoremap <leader>mh <C-w>t<C-w>K
 noremap <C-w>M   <C-w>\| <C-w>_ 
 noremap <C-w>m   <C-w>=                                         
 
+
+""" +++ Settigs for Plugins! ++++
 "Vim-notes settings
 let g:notes_directories = ['~/notes/vim-notes', '~/.vim/pack/SolidHabu/start/vim-notes/misc/notes'] 
 let g:notes_suffix = '.note'
